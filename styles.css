@@ -1,26 +1,215 @@
+.site-header {
+    background: linear-gradient(to bottom, #d6d6d6, #f0f0f076);
+    /* keeps that soft gray gradient look */
+    border-bottom: 3px solid #0d47a1;
+    /* blue accent */
+    padding: 50px 20px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-header {
-    background-color: #898687;
-    color: white;
+.header-container {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
+    gap: 40px;
+    /* space between image and text */
+    flex-wrap: wrap;
+    /* makes it responsive on smaller screens */
+    max-width: 900px;
+    margin: 0 auto;
 }
+
+.profile-pic {
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-text {
+    text-align: left;
+    max-width: 500px;
+}
+
+.header-text h1 {
+    font-size: 2em;
+    color: #0d47a1;
+    margin-bottom: 0.1em;
+}
+
+.header-text h2 {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.header-text .tagline {
+    font-size: 1.1em;
+    color: #555;
+    font-style: italic;
+    margin-top: 0.2em;
+}
+
+
+
+.subheading {
+    font-size: 0.8em;
+    font-weight: normal;
+    color: #555;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* display: flex;
+  justify-content: center;
+  align-items: center; */
+    height: 100vh;
+    background-color: #f7f9fb;
+}
+
+.grid-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 20px;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    perspective: 800px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.card-front {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+}
+
+/* .card-back {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+  transform: rotateY(180deg);
+} */
+.card-back {
+    background-color: #e0e0e0;
+    /* gray tone matching the header */
+    color: #0d47a1;
+    /* your blue text color */
+    border: 1px solid #ccc;
+    transform: rotateY(180deg);
+}
+
+
 footer {
-    background-color:#898687 ;
+    background-color: #898687;
 }
-.centered{
+
+.centered {
     text-align: center;
 }
+
 .intro {
     max-width: 500px;
     text-align: left;
 }
 
+/* === HEADINGS === */
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #0d47a1;
+    /* same blue as your grid titles */
+    margin-bottom: 0.2em;
+    font-family: Arial, sans-serif;
+}
 
+h3 {
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+    font-weight: normal;
+    margin-top: 0;
+    font-family: Arial, sans-serif;
+}
 
+.hero {
+    text-align: center;
+    background: linear-gradient(to bottom, #ffffff, #f7f9fb);
+    padding: 60px 20px;
+    border-top: 3px solid #0d47a1;
+}
 
+.hero-text h2 {
+    font-size: 2em;
+    color: #0d47a1;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+}
 
+.hero-text h3 {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 400;
+    margin-top: 0;
+}
 
+/* ===== ESSENTIAL QUESTION SECTION ===== */
+.essential {
+    background-color: #e3f2fd;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+.essential h2 {
+    color: #0d47a1;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
 
+.essential p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0;
+}
