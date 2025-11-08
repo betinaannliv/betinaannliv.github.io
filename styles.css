@@ -1,5 +1,5 @@
 .site-header {
-    background: linear-gradient(to bottom, #d6d6d6, #f0f0f076);
+    /* background: linear-gradient(to bottom, #d6d6d6, #f0f0f076); */
     /* keeps that soft gray gradient look */
     border-bottom: 3px solid #0d47a1;
     /* blue accent */
@@ -20,10 +20,48 @@
     margin: 0 auto;
 }
 
+.header-text h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* spacing between name and icon */
+}
+
+.header-text h1 a {
+    color: #0d47a1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.header-text h1 a:hover {
+    color: #1565c0;
+    transform: scale(1.05);
+    text-shadow: 0 2px 6px rgba(13, 71, 161, 0.3);
+}
+
+/* LinkedIn icon style */
+.linkedin-icon i {
+    font-size: 1.4em;
+    color: #0a66c2;
+    /* official LinkedIn blue */
+    transition: all 0.3s ease;
+}
+
+.linkedin-icon i:hover {
+    color: #004182;
+    transform: scale(1.2);
+}
+
+
 .profile-pic {
-    width: 180px;
+    width: 350px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); */
+}
+
+a {
+    text-decoration: none;
+    color: #0d47a1;
 }
 
 .header-text {
@@ -34,6 +72,7 @@
 .header-text h1 {
     font-size: 2em;
     color: #0d47a1;
+    text-decoration: none;
     margin-bottom: 0.1em;
 }
 
@@ -43,12 +82,14 @@
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 0.5em;
+    text-align: right;
 }
 
 .header-text .tagline {
     font-size: 1.1em;
     color: #555;
     font-style: italic;
+    text-align: right;
     margin-top: 0.2em;
 }
 
@@ -66,7 +107,7 @@ body {
   justify-content: center;
   align-items: center; */
     height: 100vh;
-    background-color: #f7f9fb;
+    background-color: white;
 }
 
 .grid-section {
@@ -115,6 +156,8 @@ body {
     font-weight: bold;
     padding: 10px;
 }
+
+
 
 .card-front {
     background-color: #e3f2fd;
@@ -168,12 +211,17 @@ h3 {
     font-family: Arial, sans-serif;
 }
 
+
 .hero {
     text-align: center;
     background: linear-gradient(to bottom, #ffffff, #f7f9fb);
-    padding: 60px 20px;
+    padding: 40px 20px 10px;
+    /* top, sides, bottom — reduced bottom padding */
     border-top: 3px solid #0d47a1;
+    margin-bottom: 10px;
+    /* optional: tighten the space below */
 }
+
 
 .hero-text h2 {
     font-size: 2em;
@@ -212,4 +260,57 @@ h3 {
     font-size: 1.1em;
     color: #333;
     margin: 0;
+}
+
+/* ===== NEXT STEPS SECTION ===== */
+
+.next-box {
+    background-color: #e3f2fd;
+    /* same as essential section */
+    border: 2px solid #0d47a1;
+    border-radius: 10px;
+    padding: 30px 150px;
+    text-align: center;
+    width: 500px;
+    margin: auto;
+    height: fit-content;
+    box-shadow: 0 2px 6px rgba(13, 71, 161, 0.2);
+}
+
+.next-box h2 {
+    color: #0d47a1;
+    font-size: 1.9em;
+}
+
+.pathways {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.path-card {
+    background-color: #e3f2fd;
+    border: 2px solid #0d47a1;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 300px;
+    min-width: 280px;
+    box-shadow: 0 2px 6px rgba(13, 71, 161, 0.2);
+}
+
+.path-card h3 {
+    color: #0d47a1;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.path-card p {
+    color: #333;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.4;
 }
